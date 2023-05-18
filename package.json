@@ -1,0 +1,11 @@
+{
+  "name": "Tarea3Tallerint",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/gianlucafalcone/Tarea3Tallerint.git",
+  "author": "Gianluca Falcone <gianluca.falcone@uc.cl>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
