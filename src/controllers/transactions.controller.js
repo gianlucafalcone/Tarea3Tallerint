@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
+const transaction = require('../models').transaction;
 
 
 router.post('/', async (req, res) => {
@@ -17,7 +17,7 @@ router.post('/', async (req, res) => {
     // Decodificar el campo "data" en Base64
     const decodedData = Buffer.from(data, 'base64').toString('utf-8');
 
-    await transaccion.create({
+    await transaction.create({
       type: parseInt(decodedData.slice(0,4)),
       id: parseInt(decodedData.slice(4,14)),
       sourceBank : parseInt(decodedData.slice(14,21)),
